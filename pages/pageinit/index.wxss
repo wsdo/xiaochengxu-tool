@@ -1,0 +1,7 @@
+/**index.wxss**/
+.usermotto {
+  margin-top: 10px;
+}
+.tab {
+  margin: 0 20px;
+}

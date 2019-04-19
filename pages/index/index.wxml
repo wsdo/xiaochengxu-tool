@@ -1,0 +1,92 @@
+<button class="share" type="primary" bindtap="login">获取code</button>
+<button class="share" type="primary" bindtap="testLogin">测试登录</button>
+<button
+ class="share"
+ type="primary"
+ open-type="getUserInfo"
+ bindgetuserinfo="getUserInfo"
+>获取用户信息
+</button>
+<button class="share" type="primary" bindtap="updateUser">更新用户信息</button>
+
+<view>
+	<text class="" selectable="false" space="false" decode="false">
+    code: {{code}}
+  </text>
+	<text class="" selectable="false" space="false" decode="false">
+    token: {{token}}
+  </text>
+</view>
+<view class="userinfo">
+	<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+		获取头像昵称
+	</button>
+	<block wx:else>
+		<image
+		 bindtap="bindViewTap"
+		 class="userinfo-avatar"
+		 src="{{userInfo.avatarUrl}}"
+		 background-size="cover"
+		/>
+		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+	</block>
+
+	<form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+		<view class="section section_gap">
+			<view class="section__title">switch</view>
+			<switch name="switch" />
+		</view>
+		<view class="btn-area">
+			<button formType="submit">获取fromId</button>
+			<button formType="reset">Reset</button>
+		</view>
+	</form>
+</view>
+
+<view class='root_layout'>
+  <view class='account_number'>
+    <text>账号：</text>
+    <form bindsubmit="saveFormId" report-submit="{{true}}" class='form_class'>
+      <button formType="submit" class='form_button'>
+        <input bindinput='inputAccount' placeholder-style="color:#bbbbbb" placeholder='请输入账号'></input>
+      </button>
+    </form>
+  </view>
+  <view class='account_number'>
+    <text>密码：</text>
+    <form bindsubmit="saveFormId" report-submit="{{true}}" class='form_class'>
+      <button formType="submit" class='form_button'>
+        <input bindinput='inputPsw' password='{{true}}' placeholder-style="color:#bbbbbb" placeholder='请输入密码'></input>
+      </button>
+    </form>
+  </view>
+  <form bindsubmit="formSubmit1" report-submit="{{true}}">
+    <button formType="submit">登录</button>
+  </form>
+
+</view>
+  <button class="contact" plain="true" open-type="contact">
+    唤起客服
+  </button>
+
+<!-- 1 -->
+<form bindsubmit="formSubmit" report-submit="{{true}}">
+  <!-- 2 -->
+  <button formType="submit" class='btn'>
+    <form bindsubmit="formSubmit" report-submit="{{true}}">
+      <button formType="submit" class='btn'>
+        <!-- 3 -->
+        <form bindsubmit="formSubmit" report-submit="{{true}}">
+          <button formType="submit" class='btn'>
+            <!-- 4 -->
+            <form bindsubmit="formSubmit" report-submit="{{true}}">
+              <button formType="submit" class='btn'>
+                <view class='u-publish-btn'  bindtap='test'>发布</view>
+              </button>
+            </form>
+          </button>
+        </form>
+      </button>
+    </form>
+  </button>
+</form>

@@ -1,0 +1,9 @@
+<!--pages/poster/index.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+  <canvas class="poster" canvas-id="poster" style="width:100%;height:{{posterHeight}}px;">
+
+  </canvas>
+  <button hover-class="none" class="gen" bindtap="poster">
+    生成海报
+  </button>
+</view>

@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/poster/index",
+    "pages/logs/logs",
+    "pages/discover/index",
+    "pages/h5/index",
+    "pages/share/index",
+    "pages/me/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "测试专用",
+    "navigationBarTextStyle":"black"
+  }
+}

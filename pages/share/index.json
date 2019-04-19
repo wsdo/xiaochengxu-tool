@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-button": "../../ui/iview/button/index",
+    "i-tabs": "../../ui/iview/tabs/index",
+    "i-tab": "../../ui/iview/tab/index",
+    "i-card": "../../ui/iview/card/index",
+    "van-panel": "../../ui/vant/panel/index",
+    "van-card": "../../ui/vant/card/index"
+  }
+}
